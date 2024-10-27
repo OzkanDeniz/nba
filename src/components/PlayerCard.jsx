@@ -7,9 +7,9 @@ const PlayerCard = ({ legends }) => {
 
   return (
     <Col xs={10} sm={8} md={6} lg={4} xl={3}>
-      <Card onClick={()=>setshow(!show)} role="button">
+      <Card onClick={() => setshow(!show)} role="button">
         {show ? (
-          <Card.Img variant="top" src={legends.img} />
+          <Card.Img variant="top" src={legends.img}/>
         ) : (
           <Card.Body>
             <ul>
