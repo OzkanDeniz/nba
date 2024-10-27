@@ -7,11 +7,11 @@ const PlayerCard = ({ legends }) => {
 
   return (
     <Col xs={10} sm={8} md={6} lg={4} xl={3}>
-      <Card>
+      <Card onClick={()=>setshow(!show)} role="button">
         {show ? (
-          <Card.Img onClick={()=>setshow(false)} variant="top" src={legends.img} />
+          <Card.Img variant="top" src={legends.img} />
         ) : (
-          <Card.Body onClick={()=>setshow(true)}>
+          <Card.Body>
             <ul>
               {legends.statistics.map((item) => (
                 <li className="list-unstyled h5 text-start">🏀{item}</li>
