@@ -6,8 +6,8 @@ const CardContainer = () => {
   return (
     <Container>
       <Row>
-        {data.map((item) => (
-          <PlayerCard item={item} />
+        {data.map((legends) => (
+          <PlayerCard legends={legends} />
         ))}
       </Row>
     </Container>
