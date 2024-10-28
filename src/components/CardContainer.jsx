@@ -8,12 +8,7 @@ const CardContainer = () => {
 
   const handleChange = (e) => {
     setsearch(e.target.value);
-    
   };
-
-const filteredData = data.filter(legends=> legends.name.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase()))
-console.log(filteredData)
-
 
   return (
     <>
@@ -26,9 +21,15 @@ console.log(filteredData)
 
       <Container>
         <Row>
-          {data.map((legends) => (
-            <PlayerCard key={legends.id} legends={legends} />
-          ))}
+          {data
+            .filter((legends) =>
+              legends.name
+                .toLocaleLowerCase()
+                .includes(search.trim().toLocaleLowerCase())
+            )
+            .map((legends) => (
+              <PlayerCard key={legends.id} legends={legends} />
+            ))}
         </Row>
       </Container>
     </>
