@@ -16,6 +16,7 @@ const CardContainer = () => {
         type="search"
         onChange={(e) => handleChange(e)}
         placeholder="Search Player..."
+        className="input w-50 m-auto"
       />
       <br />
 
