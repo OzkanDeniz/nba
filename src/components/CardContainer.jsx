@@ -21,7 +21,7 @@ const CardContainer = () => {
       <br />
 
       <Container>
-        <Row>
+        <Row className="gy-3">
           {data
             .filter((legends) =>
               legends.name
